@@ -1,0 +1,236 @@
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/*
+ BARVY
+ sede pozadi      #e5e5e5
+ svetle fialova   #48418e
+ tmave fialova    #25133d
+ pink in prophile picture #a32e7d
+ blue in prophile picture #000c3c
+ yellow in prophile picture #ffba5e
+ light pink in prophile picture #f85894
+ middle blue in prophile picture #244266
+*/
+
+/* higher elements */
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000c3c;
+    color:#ffba5e;
+    font-family: "Source Raleway Pro", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.wrapping {
+    margin: 0 auto; 
+    background: #000c3c;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* general elements */
+
+a {
+    text-decoration: none;
+    color: #ffba5e;
+
+}
+
+a:hover{
+    text-decoration: underline;
+
+}
+
+/* upper section */
+
+.header-main {
+    color: #ffba5e;
+    background-color: #000c3c;
+	display: flex;
+	flex-direction: row;
+    transition: background-color 0.1s ease;
+}
+
+.header-main:hover{
+    background-color: #244266;
+}
+
+.header-main div{
+    text-align: center;
+    margin: 1rem;
+    flex: 0 1 33%;
+    
+}
+
+.header-brand {
+    font-size: 1.5rem;
+}
+
+
+
+@media (min-width:0) and (max-width:768px){
+    #upper-head{
+        display: none;
+        position: absolute;
+        top: 31px;
+        right: 0px;
+        flex-direction: column;
+        z-index: 1;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+/* Main section */
+/*basic info*/
+h1{
+    font-weight: normal;
+    font-size: 450%;
+    padding: 2rem;
+}
+
+.basic-info p{
+    padding: 2rem;
+    font-size: 200%;
+}
+
+.basic-info {
+    background-image: linear-gradient(30deg, #f85894, #244266, #000c3c);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+button {
+    color: #ffba5e;
+    margin: 15px;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #ffba5e;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: 200%;
+}
+
+.side-bar{
+    width: 50px;
+    height: 100vh;
+    position:absolute;
+    right: 500px;
+    top: 480px;
+    cursor: pointer;
+}
+
+.social-links{
+    display: flex;
+}
+
+.social-links a{
+    flex: row;
+}
+
+@media (min-width:0) and (max-width:1099px){
+    #social-bar{
+        right: 0;
+        top: 0;
+    }
+}
+
+@media (min-width:0) and (max-width:1099px){
+    #links a{
+        flex: column;
+    }
+}
+
+.profpic img{
+    position:absolute;
+    max-height: 100%;
+    
+    right: 0px;
+    top:0px;
+}
+
+@media (min-width:0) and (max-width:1099px){
+    #propic{
+        display: none;
+    }
+}
+
+.iamcoding{
+    position:absolute;
+    right: 300px;
+    top:200px;
+    animation: type 3s steps(29);
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+@keyframes type {
+    0% {
+        width:0ch;
+    }
+    100% {
+        width: 29ch;
+    }
+}
+
+
+/*about me*/
+
+.about-me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.1s ease;
+}
+
+.about-me:hover{
+    background-color: #244266;
+}
+
+.about-me p{
+    min-height: 150px;
+    max-width: 400px;
+    text-align: center;
+}
+
+
+/*detail info*/
+
+.detail-info{
+    display: flex;
+    flex-direction: row;
+    transition: background-color 0.1s ease;
+}
+
+.detail-info:hover{
+    background-color: #244266;
+}
+
+.detail-info div{
+    text-align: center;
+    margin: 1rem;
+    flex: 33%;
+}
+
+.detail-info img{ 
+    max-width: 60px;
+}
+
+/*footer*/
+
+footer p{
+    text-align: center;
+}
